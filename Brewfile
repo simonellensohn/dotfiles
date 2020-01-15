@@ -4,10 +4,7 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/core'
-tap 'homebrew/dupes'
-tap 'homebrew/php'
 tap 'homebrew/services'
-tap 'homebrew/versions'
 
 # Install Antigen
 brew 'antigen'
@@ -25,7 +22,6 @@ brew 'bash'
 brew 'grep'
 
 # Install Binaries
-brew 'android-platform-tools'
 brew 'bat'
 brew 'diff-so-fancy'
 brew 'fzf'
@@ -39,6 +35,7 @@ brew 'mas' # use app store from the cli
 brew 'ncdu'
 brew 'nvm'
 brew 'prettyping'
+brew 'terminal-notifier'
 brew 'thefuck'
 brew 'tldr'
 brew 'tmux'
@@ -48,6 +45,7 @@ brew 'unrar'
 brew 'wget'
 brew 'wifi-password'
 brew 'yarn'
+brew 'zip'
 
 # Development
 brew 'php'
@@ -58,6 +56,7 @@ brew 'redis'
 # Apps
 cask 'aerial' # screen saver
 cask 'alfred'
+cask 'android-platform-tools'
 cask 'caffeine' # toggle sleep timer
 cask 'firefox'
 cask 'google-chrome'
@@ -67,12 +66,9 @@ cask 'iterm2'
 cask 'sublime-merge'
 cask 'imageoptim'
 cask 'jetbrains-toolbox'
-cask 'sequel-pro'
-cask 'slack'
 cask 'spotify'
 cask 'whatsapp'
 cask 'visual-studio-code'
-cask 'transmit'
 cask 'vagrant'
 cask 'virtualbox'
 cask 'virtualbox-extension-pack'
@@ -93,11 +89,7 @@ cask 'font-source-code-pro'
 cask 'font-source-sans-pro'
 cask 'font-source-serif-pro'
 
-# Install Mac App Store apps
-mas 'LastPass', id: 926036361
-mas 'Harvest', id: 506189836
-mas 'Slack', id: 803453959
+# Install Mac App Store Apps
 mas 'GIPHY CAPTURE', id: 668208984
-mas 'Spark', id: 1176895641
 mas 'Magnet', id: 441258766
 mas 'Bear', id: 1091189122

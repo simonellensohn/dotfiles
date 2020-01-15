@@ -17,6 +17,22 @@ brew bundle
 # Make ZSH the default shell environment
 chsh -s $(which zsh)
 
+# Source zsh config
+echo "Backing up current ~/.zshrc file to ~/.dotfiles/.zshrc_backup"
+
+if [ -f "~/.zshrc" ]; then
+    mv ~/.zshrc ~/.dotfiles/.zshrc_backup
+    rm $HOME/.zshrc
+fi
+
+if [ -f "~/.bash_profile" ]; then
+    mv ~/.bash_profile ~/.dotfiles/.bash_profile_backup
+fi
+
+ln -s $HOME/.dotfiles/zsh/.zshrc $HOME/.zshrc
+
+source $HOME/.zshrc
+
 # Check for Composer and install if we don't have it
 if test ! $(which composer); then
     curl -sS https://getcomposer.org/installer | php
@@ -35,12 +51,6 @@ cgr laravel/valet
 cgr phpmd/phpmd
 cgr spatie/http-status-check
 cgr spatie/phpunit-watcher
-cgr towa/towa-cli
 
-echo "Backing up current ~/.zshrc file to ~/.dotfiles/.zshrc_backup"
-mv ~/.zshrc ~/.dotfiles/.zshrc_backup
-
-rm $HOME/.zshrc
-ln -s $HOME/.dotfiles/zsh/.zshrc $HOME/.zshrc
-
-source $HOME/.zshrc
+# Install fzf bindings
+$(brew --prefix)/opt/fzf/install --all

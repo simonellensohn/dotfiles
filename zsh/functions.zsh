@@ -1,8 +1,8 @@
 function weather() {
-   city="$1"
+   city = "$1"
 
    if [ -z "$city" ]; then
-      city="Altach"
+      city = "Altach"
    fi
 
    eval "curl http://wttr.in/${city}"
@@ -13,7 +13,7 @@ function homestead() {
 }
 
 function xon() {
-    sed -i.default "s/^;zend_extension=/zend_extension=/" /usr/local/etc/php/7.3/conf.d/ext-xdebug.ini
+    sed -i.default "s/^;zend_extension=/zend_extension=/" /usr/local/etc/php/7.4/conf.d/ext-xdebug.ini
 
     brew services restart php
 
@@ -21,7 +21,7 @@ function xon() {
 }
 
 function xoff() {
-    sed -i.default "s/^zend_extension=/;zend_extension=/" /usr/local/etc/php/7.3/conf.d/ext-xdebug.ini
+    sed -i.default "s/^zend_extension=/;zend_extension=/" /usr/local/etc/php/7.4/conf.d/ext-xdebug.ini
 
     brew services restart php
 
