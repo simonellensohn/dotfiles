@@ -33,8 +33,8 @@ brew 'hub' # additional git features
 brew 'mackup' # backup all application settings
 brew 'mas' # use app store from the cli
 brew 'ncdu'
-brew 'nvm'
 brew 'prettyping'
+brew 'Schniz/tap/fnm'
 brew 'terminal-notifier'
 brew 'thefuck'
 brew 'tldr'

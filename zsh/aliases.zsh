@@ -43,7 +43,7 @@ alias flush="dscacheutil -flushcache"
 
 # brew aliases
 alias bup="brew update && brew upgrade && brew cleanup"
-alias update="bup && composer global update && cgr update && nvm install stable"
+alias update="bup && composer global update && cgr update && fnm install stable"
 
 # Empty the Trash on all mounted volumes and the main HDD.
 # Also, clear Apple’s System Logs to improve shell startup speed.
