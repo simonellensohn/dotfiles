@@ -1,3 +1,7 @@
+# Fig pre block. Keep at the top of this file.
+export PATH="${PATH}:${HOME}/.local/bin"
+eval "$(fig init zsh pre)"
+
 # Antigen
 [[ -f ~/.dotfiles/zsh/antigen.zsh ]] && source ~/.dotfiles/zsh/antigen.zsh
 
@@ -17,3 +21,7 @@
 [ -f ~/.dotfiles/zsh/z.sh ] && . ~/.dotfiles/zsh/z.sh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Fig post block. Keep at the bottom of this file.
+eval "$(fig init zsh post)"
+

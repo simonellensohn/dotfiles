@@ -20,6 +20,7 @@ alias afk='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy";
 alias nah="git reset --hard && git clean -df"
 alias wip="git add . && git commit -m 'wip'"
+alias parrot="curl parrot.live"
 
 # Laravel / PHP
 alias art="php artisan"
@@ -28,6 +29,7 @@ alias pf="phpunit --filter "
 alias tinker="php artisan tinker"
 alias phpunit="vendor/bin/phpunit"
 alias migrate="php artisan migrate"
+alias sail="[ -f sail ] && bash sail || bash vendor/bin/sail"
 
 # Usefull stuff for presentation and seeing dotfiles
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
@@ -43,7 +45,7 @@ alias flush="dscacheutil -flushcache"
 
 # brew aliases
 alias bup="brew update && brew upgrade && brew cleanup"
-alias update="bup && composer global update && cgr update && fnm install stable"
+alias update="bup && composer global update && fnm install 15"
 
 # Empty the Trash on all mounted volumes and the main HDD.
 # Also, clear Apple’s System Logs to improve shell startup speed.

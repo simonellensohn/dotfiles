@@ -1,11 +1,11 @@
 function weather() {
-   city = "$1"
+   CITY="$1"
 
-   if [ -z "$city" ]; then
-      city = "Altach"
+   if [ -z "$CITY" ]; then
+      CITY="Altach"
    fi
 
-   eval "curl http://wttr.in/${city}"
+   eval "curl http://wttr.in/${CITY}"
 }
 
 function homestead() {
@@ -26,4 +26,18 @@ function xoff() {
     brew services restart php
 
     echo "xdebug disabled"
+}
+
+function laradock() {
+    ( cd ~/development/laradock && docker-compose $* )
+}
+
+function syncK8sClusters() {
+    aws-google-auth
+
+    for AWS_PROFILE in $(grep -Po 'profile \Kcm-mt1-[a-z]' ~/.aws/config); do
+        aws eks list-clusters --profile ${AWS_PROFILE} \
+            | jq -r '.clusters[] //empty' \
+            | xargs -I{} aws eks update-kubeconfig --name {} --alias ${AWS_PROFILE}-{} --profile ${AWS_PROFILE};
+    done
 }
