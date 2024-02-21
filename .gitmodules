@@ -1,0 +1,7 @@
+[submodule "plugins/artisan"]
+	path = plugins/artisan
+	url = https://github.com/jessarcher/zsh-artisan.git
+
+[submodule "themes/spaceship-prompt"]
+	path = themes/spaceship-prompt
+	url = https://github.com/spaceship-prompt/spaceship-prompt.git
